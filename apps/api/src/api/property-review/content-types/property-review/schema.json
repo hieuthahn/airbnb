@@ -4,7 +4,7 @@
   "info": {
     "singularName": "property-review",
     "pluralName": "property-reviews",
-    "displayName": "PropertyReview",
+    "displayName": "propertyReview",
     "description": ""
   },
   "options": {

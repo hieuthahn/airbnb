@@ -4,7 +4,8 @@
   "info": {
     "singularName": "property-type",
     "pluralName": "property-types",
-    "displayName": "PropertyType"
+    "displayName": "propertyType",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,14 +16,15 @@
       "type": "string"
     },
     "iconImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "status": {
       "type": "enumeration",

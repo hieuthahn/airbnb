@@ -4,7 +4,7 @@
   "info": {
     "singularName": "property-image",
     "pluralName": "property-images",
-    "displayName": "PropertyImage",
+    "displayName": "propertyImage",
     "description": ""
   },
   "options": {

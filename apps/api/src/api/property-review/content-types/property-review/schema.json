@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "property_reviews",
+  "info": {
+    "singularName": "property-review",
+    "pluralName": "property-reviews",
+    "displayName": "PropertyReview",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "comment": {
+      "type": "text"
+    },
+    "rating": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "unactive"
+      ]
+    },
+    "property": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::property.property",
+      "inversedBy": "property_reviews"
+    },
+    "admin_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    },
+    "cleanlinessRating": {
+      "type": "string"
+    },
+    "communicationRating": {
+      "type": "string"
+    },
+    "checkInRating": {
+      "type": "string"
+    },
+    "accuracyRating": {
+      "type": "string"
+    },
+    "locationgRating": {
+      "type": "string"
+    },
+    "valueRating": {
+      "type": "string"
+    }
+  }
+}

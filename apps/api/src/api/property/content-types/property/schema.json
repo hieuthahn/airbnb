@@ -1,0 +1,109 @@
+{
+  "kind": "collectionType",
+  "collectionName": "properties",
+  "info": {
+    "singularName": "property",
+    "pluralName": "properties",
+    "displayName": "Property"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "address": {
+      "type": "text"
+    },
+    "latitude": {
+      "type": "string"
+    },
+    "longtitude": {
+      "type": "string"
+    },
+    "bedRoomCount": {
+      "type": "string"
+    },
+    "bedCount": {
+      "type": "string"
+    },
+    "bathRoomCount": {
+      "type": "string"
+    },
+    "accomodatesCount": {
+      "type": "string"
+    },
+    "minimumStay": {
+      "type": "string"
+    },
+    "availabilityType": {
+      "type": "enumeration",
+      "enum": [
+        "one bed",
+        "two bed"
+      ]
+    },
+    "startDate": {
+      "type": "datetime"
+    },
+    "endDate": {
+      "type": "datetime"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "priceType": {
+      "type": "enumeration",
+      "enum": [
+        "per night",
+        "week",
+        "weeks"
+      ]
+    },
+    "minimumStayType": {
+      "type": "enumeration",
+      "enum": [
+        "Day",
+        "Week",
+        "Year"
+      ]
+    },
+    "refundType": {
+      "type": "enumeration",
+      "enum": [
+        "cash",
+        "banking"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "unactive"
+      ]
+    },
+    "property_images": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::property-image.property-image",
+      "mappedBy": "property"
+    },
+    "property_reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::property-review.property-review",
+      "mappedBy": "property"
+    },
+    "bookings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking.booking",
+      "mappedBy": "property"
+    }
+  }
+}

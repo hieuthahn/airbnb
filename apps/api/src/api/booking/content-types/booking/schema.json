@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings",
+  "info": {
+    "singularName": "booking",
+    "pluralName": "bookings",
+    "displayName": "Booking"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "checkInDate": {
+      "type": "datetime"
+    },
+    "checkOutDate": {
+      "type": "datetime"
+    },
+    "pricePerDay": {
+      "type": "decimal"
+    },
+    "priceForStay": {
+      "type": "decimal"
+    },
+    "taxPaid": {
+      "type": "decimal"
+    },
+    "siteFees": {
+      "type": "decimal"
+    },
+    "amountPaid": {
+      "type": "decimal"
+    },
+    "refundPaid": {
+      "type": "decimal"
+    },
+    "isRefund": {
+      "type": "boolean"
+    },
+    "cancelDate": {
+      "type": "datetime"
+    },
+    "effectiveAmount": {
+      "type": "decimal"
+    },
+    "bookingDate": {
+      "type": "datetime"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "unactive"
+      ]
+    },
+    "property": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::property.property",
+      "inversedBy": "bookings"
+    },
+    "admin_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    }
+  }
+}

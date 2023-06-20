@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "property_amentities",
+  "info": {
+    "singularName": "property-amentity",
+    "pluralName": "property-amentities",
+    "displayName": "PropertyAmentity",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "unactive"
+      ]
+    },
+    "property": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::property.property"
+    },
+    "amentities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::amentity.amentity"
+    }
+  }
+}

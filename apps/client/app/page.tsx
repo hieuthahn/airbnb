@@ -1,10 +1,6 @@
-import { Button, Header } from "ui";
+import { redirect } from "next/navigation";
 
-export default function Page() {
-  return (
-    <>
-      <Header text="Web" />
-      <Button />
-    </>
-  );
+// This page only renders when the app is built statically (output: 'export')
+export default function RootPage() {
+  redirect("/en");
 }
